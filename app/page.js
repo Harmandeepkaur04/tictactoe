@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import TicTacToe from "./tictactoe/page";
-import PlayPage from "./playpage/playPage";
+import PlayPage from "./playpage/page";
 
 export default function Home() {
   return (

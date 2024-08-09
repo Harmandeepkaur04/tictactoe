@@ -1,6 +1,6 @@
 import { useRouter } from 'next/navigation';
 import TicTacToe from '../tictactoe/page';
-import styles from './PlayPage.module.css';
+import styles from './page.module.css';
 
 export default function PlayPage() {
     const router = useRouter();
