@@ -1,0 +1,101 @@
+/* PlayPage.module.css */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: transparent;
+    overflow: hidden; /* Prevent scrolling due to effects */
+}
+
+.header {
+    font-size: 48px;
+    color: #00bfff; /* Blue color for header */
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(0,191,255,0.2) 0%, transparent 80%);
+    opacity: 0.5;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    animation: pulse 3s infinite;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #00bfff, #007acc); /* Gradient background */
+    color: #fff; /* White text */
+    padding: 12px 24px; /* Padding for better readability */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.8); /* Subtle glow effect */
+}
+
+.playButton {
+    background: linear-gradient(135deg, #00bfff, #007acc); /* Vibrant blue gradient */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 30px 60px; /* Increase padding for a larger button */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline-block */
+    font-size: 32px; /* Increase font size */
+    margin: 20px 10px; /* Adjust margin */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 20px; /* More rounded corners */
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.8), 0 0 30px rgba(0, 191, 255, 0.5); /* Vibrant glowing effect */
+}
+
+.playButton:hover {
+    background: linear-gradient(135deg, #33ccff, #005fa3); /* Darker gradient on hover */
+    box-shadow: 0 0 30px rgba(0, 191, 255, 1), 0 0 45px rgba(0, 191, 255, 0.7); /* Stronger glow on hover */
+    transform: scale(1.1) rotate(2deg); /* Slightly enlarge and rotate on hover */
+}
+
+.footer {
+    margin-top: 40px; /* Space above the footer */
+    font-size: 18px; /* Slightly larger font size */
+    color: #000; /* Black color for footer text */
+    text-align: center;
+    font-family: 'Arial', sans-serif; /* Change font */
+    position: relative;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #00bfff, #007acc); /* Matching gradient */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Padding for better readability */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.6); /* Subtle glow effect */
+    display: inline-block; /* Ensure content fits well */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
