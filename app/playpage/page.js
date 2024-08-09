@@ -1,3 +1,4 @@
+"use client"
 import { useRouter } from 'next/navigation';
 import TicTacToe from '../tictactoe/page';
 import styles from './page.module.css';
